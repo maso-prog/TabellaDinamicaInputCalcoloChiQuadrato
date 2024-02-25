@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabella Dinamica con Input e Calcolo del Chi Quadrato</title>
+<meta name="description" content="Tabella Dinamica con Input e Calcolo del Chi Quadrato">
+<meta name="keywords" content="calcolo tabella dati sperimentali, tabella dati sperimentali, calcolo tabella di contingenza, tabella di contingenza, dati sperimentali, contingenza, calcolo tabella delle differenze, tabella delle differenze, differenze, calcolo chi, calcolo chi quadrato, chi, chi quadrato normalizzato, dinamica, chi quadrato, statistica, calcolo, tabella dati ">
+<meta name="author" content="Masoni e Cipollini">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="background"></div>
+  <div id="randomNumbers"></div>
+  <div id="container">
+    <div id="box">
+      <h2>Tabella Dinamica con Input e Calcolo del Chi Quadrato</h2>
+
+      <!-- Seleziona il numero di righe e colonne per la tabella -->
+      <div class="input-group">
+        <div class="gruppo-movimento">
+          <input required="" type="number" min="1" id="rows" class="input">
+          <span class="barra"></span>
+          <label class="etichetta">
+            <span class="carattere-etichetta" style="--indice: 0">R</span>
+            <span class="carattere-etichetta" style="--indice: 1">i</span>
+            <span class="carattere-etichetta" style="--indice: 2">g</span>
+            <span class="carattere-etichetta" style="--indice: 3">h</span>
+            <span class="carattere-etichetta" style="--indice: 4">e</span>
+          </label>
+        </div> 
+        <div class="gruppo-movimento">
+          <input required="" type="number" min="1" id="columns" class="input">
+          <span class="barra"></span>
+          <label class="etichetta">
+            <span class="carattere-etichetta" style="--indice: 0">C</span>
+            <span class="carattere-etichetta" style="--indice: 1">o</span>
+            <span class="carattere-etichetta" style="--indice: 2">l</span>
+            <span class="carattere-etichetta" style="--indice: 3">o</span>
+            <span class="carattere-etichetta" style="--indice: 4">n</span>
+            <span class="carattere-etichetta" style="--indice: 5">n</span>
+            <span class="carattere-etichetta" style="--indice: 6">e</span>
+          </label>
+        </div> 
+      </div> 
+      
+      <!-- Bottone per generare la tabella -->
+      <button class="button" onclick="createTable()">Genera Tabella Dati Sperimentali</button>
+      
+      <!-- Tabella -->
+      <table id="myTable">   
+      </table>
+
+      <!-- Contenitore per le somme delle colonne, righe e la somma totale della tabella -->
+      <div id="sumsContainer">
+        <div id="columnSums"></div>
+        <div id="rowSums"></div>
+        <div id="totalSum"></div>
+      </div>
+      
+
+      
+      <!-- Bottone per creare la tabella di contingenza -->
+      <button class="button" onclick="createTabellaContingenza()">Crea Tabella di Contingenza</button>      
+      <!-- Tabella di contingenza -->
+      <table id="tabellaContingenza">
+      </table>
+      
+
+      <!-- Bottone per creare la tabella delle differenze -->
+      <button class="button" onclick="createTabellaDifferenze()">Crea Tabella delle Differenze</button>      
+      <!-- Tabella delle differenze -->
+      <table id="tabellaDifferenze">
+      </table>
+      
+
+      <!-- Bottone per calcolare il chi quadrato -->
+      <button class="button" onclick="calculateChiSquare()">Calcola Chi Quadrato</button>      
+      <!-- Div per visualizzare il risultato del chi quadrato -->
+      <div id="chiSquareContainer">
+          <div id="chiSquareResult"></div>
+      </div>
+    </div>    
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

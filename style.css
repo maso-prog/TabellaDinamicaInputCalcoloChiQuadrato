@@ -1,0 +1,190 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+#background {
+    position: fixed; /* Modifica la posizione a fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    z-index: -1;
+}
+
+.number {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    z-index: -1;
+}
+
+/* container */
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+ 
+#box{
+    /* Rimuovi la larghezza fissa e imposta margin: auto; per centrare il box */
+    width: auto;
+    margin: auto;
+    max-width: 70%; /* Limita la larghezza massima del box per evitare che sia troppo grande */
+    max-height: 60vh; /* Limita l'altezza massima del box al 90% dell'altezza della finestra del browser */
+    overflow: auto; /* Abilita lo scorrimento all'interno del box se la tabella supera le dimensioni del box */
+    background-color: #f0f0f0; /* colore di sfondo del box */
+    border: 2px solid #333; /* bordo del box */
+    border-radius: 8px; /* bordi arrotondati del box */
+    padding: 3% 5%; /* spazio interno al box */
+    text-align: center; /* allinea il testo al centro */
+}
+
+/* Stile degli input */
+.input-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}  
+
+/*bottoni*/
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+}
+  
+button:hover{
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+  
+button:active{
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+/* posizione bottoni*/
+
+.button {
+    display: block;
+    margin: 20px auto;
+  }
+  
+/*input*/
+
+.gruppo-movimento{
+    position: relative;
+}
+
+.gruppo-movimento .input{
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+
+.gruppo-movimento .input:focus{
+    outline: none;
+}
+
+.gruppo-movimento .etichetta{
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+}
+
+.gruppo-movimento .carattere-etichetta{
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--indice) * .05s);
+}
+
+.gruppo-movimento .input:focus ~ label .carattere-etichetta,
+.gruppo-movimento .input:valid ~ label .carattere-etichetta{
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #5264AE;
+}
+
+.gruppo-movimento .barra {
+    position: relative;
+    display: block;
+    width: 215px;
+}
+
+.gruppo-movimento .barra:before, .gruppo-movimento .barra:after{
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+}
+
+.gruppo-movimento .barra:before{
+    left: 50%;
+}
+
+.gruppo-movimento .barra:after{
+    right: 50%;
+}
+
+.gruppo-movimento .input:focus ~ .barra:before,
+.gruppo-movimento .input:focus ~ .barra:after{
+    width: 50%;
+}
+
+/*tabella*/
+
+table{
+    border-collapse: collapse;
+    width: 40%;
+}
+
+th, td{
+    border: 1px solid black;
+    padding-top: 10px;
+    text-align: center;
+}
+
+th{
+    background-color: #f2f2f2;
+}
+
+#sumsContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#chiSquareContainer{
+    margin-top: 20px;
+}
