@@ -36,7 +36,7 @@ body, html {
     width: auto;
     margin: auto;
     max-width: 70%; /* Limita la larghezza massima del box per evitare che sia troppo grande */
-    max-height: 60vh; /* Limita l'altezza massima del box al 90% dell'altezza della finestra del browser */
+    max-height: 65vh; /* Limita l'altezza massima del box al 90% dell'altezza della finestra del browser */
     overflow: auto; /* Abilita lo scorrimento all'interno del box se la tabella supera le dimensioni del box */
     background-color: #f0f0f0; /* colore di sfondo del box */
     border: 2px solid #333; /* bordo del box */
