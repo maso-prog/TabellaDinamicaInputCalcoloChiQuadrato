@@ -6,7 +6,7 @@ body, html {
 }
 
 #background {
-    position: fixed; /* Modifica la posizione a fixed */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,20 +32,19 @@ body, html {
 }
  
 #box{
-    /* Rimuovi la larghezza fissa e imposta margin: auto; per centrare il box */
     width: auto;
     margin: auto;
-    max-width: 70%; /* Limita la larghezza massima del box per evitare che sia troppo grande */
-    max-height: 65vh; /* Limita l'altezza massima del box al 90% dell'altezza della finestra del browser */
-    overflow: auto; /* Abilita lo scorrimento all'interno del box se la tabella supera le dimensioni del box */
-    background-color: #f0f0f0; /* colore di sfondo del box */
-    border: 2px solid #333; /* bordo del box */
-    border-radius: 8px; /* bordi arrotondati del box */
-    padding: 3% 5%; /* spazio interno al box */
-    text-align: center; /* allinea il testo al centro */
+    max-width: 70%;
+    max-height: 65vh;
+    overflow: auto; /* abilita lo scorrimento all'interno del box se la tabella supera le dimensioni del box */
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 3% 5%; 
+    text-align: center;
 }
 
-/* Stile degli input */
+/* stile degli input */
 .input-group{
     display: flex;
     justify-content: center;
@@ -54,7 +53,16 @@ body, html {
     margin-bottom: 20px;
 }  
 
-/*bottoni*/
+/* stili per schermi più piccoli, come i telefoni */
+@media screen and (max-width: 600px) {
+    .input-group {
+      flex-direction: column; /* cambia la direzione del flex container in colonna */
+      gap: 20px; /* aggiungi uno spazio tra gli elementi */
+    }
+  }
+
+  
+/* bottoni */
 
 button{
     display: flex;
@@ -83,14 +91,14 @@ button:active{
     box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
 
-/* posizione bottoni*/
+/* posizione bottoni */
 
 .button {
     display: block;
     margin: 20px auto;
   }
   
-/*input*/
+/* input */
 
 .gruppo-movimento{
     position: relative;
@@ -162,7 +170,7 @@ button:active{
     width: 50%;
 }
 
-/*tabella*/
+/* tabella */
 
 table{
     border-collapse: collapse;
