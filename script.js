@@ -182,7 +182,7 @@ function calculateChiSquare() {
 
     // Visualizza il risultato del chi quadrato
     var chiSquareResultDiv = document.getElementById("chiSquareResult");
-    chiSquareResultDiv.textContent = "Chi Quadrato: " + chiSquare.toFixed(2);
+    chiSquareResultDiv.textContent = "Chi Quadrato: " + chiSquare.toFixed(5);
 
     // Calcola il numero di gradi di libertà
     if(numRows>=numCols)
@@ -195,8 +195,8 @@ function calculateChiSquare() {
     }
 
     // Calcola e visualizza il chi quadrato normalizzato
-    var normalizedChiSquare = chiSquare / (degreesOfFreedom*calculateTotalSum());
-    chiSquareResultDiv.innerHTML += "<br>Chi Quadrato Normalizzato: " + normalizedChiSquare.toFixed(2);
+    var normalizedChiSquare = chiSquare / (degreesOfFreedom*calculateTotalSum())*2;
+    chiSquareResultDiv.innerHTML += "<br>Chi Quadrato Normalizzato: " + normalizedChiSquare.toFixed(5);
 
     return chiSquare;
 }
@@ -239,7 +239,7 @@ function createTabellaDifferenze() {
             var obs = parseFloat(tableContingency.rows[i].cells[j].textContent);
             var exp = parseFloat(table.rows[i + 1].cells[j + 1].querySelector("input").value); // Utilizza i + 1 e j + 1 per compensare la riga delle intestazioni
             var difference = exp - obs;
-            cell.textContent = "(" + exp + " - " + obs + ") = " + difference.toFixed(2); // Visualizza la differenza nella cella
+            cell.textContent = difference.toFixed(2); // Visualizza la differenza nella cella
         }
     }
 }
@@ -341,7 +341,3 @@ function getRandomSymbol() {
     const symbols = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '√', '+', '-', '×', '÷', 'π', 'e', 'x', 'y', '<', '>', '∫','∑', 'Δ']; // Aggiungi altri simboli se necessario
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
-
-
-
-
